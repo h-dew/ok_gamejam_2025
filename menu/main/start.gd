@@ -9,7 +9,6 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-	
+
 func _pressed() -> void:
-	get_tree().paused = false
-	get_tree().change_scene_to_file("res://menu/main/main_menu.tscn")
+	get_tree().change_scene_to_file("res://game_modes/tower_defense/tower_defense.tscn")
