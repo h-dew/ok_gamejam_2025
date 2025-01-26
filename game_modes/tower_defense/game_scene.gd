@@ -4,12 +4,13 @@ var build_mode = false
 var build_valid = false
 var build_location
 var build_type
+var wavetex
 
 func _ready():
 	print(get_tree().get_nodes_in_group("tower_buttons"))
 	for i in get_tree().get_nodes_in_group("tower_buttons"):
 		i.pressed.connect(self.initiate_build_mode.bind(i.get_name()))
-		
+	wavetex = $"../SubViewportContainer/SubViewport/TextureRect"
 	
 func _process(delta):
 	if build_mode:
