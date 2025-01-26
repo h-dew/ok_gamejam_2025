@@ -10,6 +10,7 @@ var wavetex
 var pos = Vector2(0,0)
 var rate
 var damage
+<<<<<<< HEAD
 
 func _ready() -> void:
 	if built:
@@ -38,3 +39,13 @@ func _on_range_body_entered(body: Node2D) -> void:
 
 func _on_range_body_exited(body: Node2D) -> void:
 	bubble_array.erase(body.get_parent())
+=======
+var len
+	
+func _physics_process(delta):
+	turn()
+	
+func turn():
+	var enemy_position = get_global_mouse_position()
+	get_node("Base").look_at(enemy_position)
+>>>>>>> 7ac414ce9fc7591f699f1525c2009c6d8366f536

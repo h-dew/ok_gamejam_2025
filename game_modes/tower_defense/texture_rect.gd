@@ -13,8 +13,8 @@ var buffer2: Array[float]
 func drawLine(intensity: float, from: Vector2i, to: Vector2i, velocity: Vector2i) -> void:
 	# Only uses x component of scale
 	var distance: int = max(abs(from.x - to.x), abs(from.y - to.y))
-	var fromf = Vector2(from.x, from.y)
-	var tof = Vector2(to.x, to.y)
+	var fromf = Vector2(max(min(from.x, resXs), 0), max(min(from.y, resYs), 0))
+	var tof = Vector2(max(min(to.x, resXs), 0), max(min(to.y, resYs), 0))
 	
 	for x in distance + 1:
 		var t: float
