@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://63gb7yhmqeww"
-path="res://.godot/imported/range_display.png-f939cfcb1cb568a28719f926c143c2b6.ctex"
+path="res://.godot/imported/range_display.png-715be5f982d52324f5490de12e308830.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game_modes/tower_defense/range_display.png"
-dest_files=["res://.godot/imported/range_display.png-f939cfcb1cb568a28719f926c143c2b6.ctex"]
+source_file="res://game_modes/tower_defense/towers/range_display.png"
+dest_files=["res://.godot/imported/range_display.png-715be5f982d52324f5490de12e308830.ctex"]
 
 [params]
 
