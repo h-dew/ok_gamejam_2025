@@ -2,8 +2,8 @@ extends Node
 
 var tower_data = {
 	"square_t1": {
-		"damage": 0.5,
-		"rate": 10,
+		"damage": 20,
+		"rate": 1,
 		"range": 400},
 	"square_t2": {
 		"damage": 40,
