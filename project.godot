@@ -13,7 +13,7 @@ config_version=5
 config/name="ok_gamejam_2025"
 run/main_scene="res://menu/main/main_menu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-boot_splash/show_image=false
+run/max_fps=30
 config/icon="res://icon.svg"
 
 [autoload]
@@ -28,6 +28,7 @@ GameData="*res://singletons/game_data.gd"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1200
+window/stretch/mode="viewport"
 
 [editor_plugins]
 
@@ -70,3 +71,4 @@ locale/translations_pot_files=PackedStringArray("res://game_modes/visual_novel/d
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true

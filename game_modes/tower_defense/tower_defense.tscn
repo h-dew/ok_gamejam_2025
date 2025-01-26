@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://game_modes/tower_defense/tower_defense.gd" id="1_ac523"]
 [ext_resource type="PackedScene" uid="uid://exfqs4lmmdr" path="res://menu/pause/pause_menu.tscn" id="2_iqw4n"]
-[ext_resource type="PackedScene" uid="uid://dc1kd513cru7f" path="res://game_modes/tower_defense/game_scene.tscn" id="5_is2eq"]
+[ext_resource type="PackedScene" uid="uid://betjx6mphe7on" path="res://game_modes/tower_defense/game_scene.tscn" id="5_2qi3g"]
 [ext_resource type="Script" path="res://game_modes/tower_defense/texture_rect.gd" id="5_k5wd5"]
 [ext_resource type="Script" path="res://game_modes/tower_defense/button.gd" id="6_joubx"]
 
@@ -56,3 +56,5 @@ offset_right = 318.0
 offset_bottom = 229.0
 text = "dripdrop"
 script = ExtResource("6_joubx")
+
+[node name="GameScene" parent="." instance=ExtResource("5_2qi3g")]

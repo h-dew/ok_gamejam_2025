@@ -10,22 +10,44 @@ var resYs: int
 var buffer1: Array[float]
 var buffer2: Array[float]
 
-func drawSquare(intensity: float, pos: Vector2i, scale: Vector2i, velocity: Vector2i) -> void:
-	var posX = pos.x
-	var posY = pos.y
-	var velX = velocity.x
-	var velY = velocity.y
-	var arrPos: int
+func drawLine(intensity: float, from: Vector2i, to: Vector2i, velocity: Vector2i) -> void:
+	# Only uses x component of scale
+	var distance: int = max(abs(from.x - to.x), abs(from.y - to.y))
+	var fromf = Vector2(from.x, from.y)
+	var tof = Vector2(to.x, to.y)
 	
+	for x in distance + 1:
+		var t: float
+		if distance == 0:
+			t = 0.0
+		else:
+			t = (float(x) / distance)
+		
+		var point = roundPoint(fromf.lerp(tof, t))
+		var arrPos = (point.x) + (point.y) * resXs
+		buffer2[arrPos] = intensity
+		buffer1[(arrPos + velocity.x) + (resXs * velocity.y)] = intensity / 2
+
+func drawSquare(intensity: float, pos: Vector2i, scale: Vector2i, velocity: Vector2i) -> void:
 	for x in scale.x:
 		for y in scale.y:
-			arrPos = (posX + x - scale.x) + (posY + (y - 1)) * resXs
-			buffer2[(arrPos + velX) + (resXs * velY)] = intensity
+			var arrPos = (pos.x + x - scale.x) + (pos.y + (y - 1)) * resXs
+			buffer2[arrPos] = intensity
+			buffer1[(arrPos + velocity.x) + (resXs * velocity.y)] = intensity / 2
 			
-			
+func roundPoint(point: Vector2) -> Vector2i:
+	return Vector2i(int(point.x), int(point.y))
+	
 func drawTriangle(intensity: float, pos: Vector2i, scale: Vector2i, velocity: Vector2i) -> void:
-	print("triangle")
-	return
+	for i in scale.x:
+		var arrPos = pos.x + i + pos.y * resXs
+		buffer1[arrPos] = intensity
+		buffer2[(arrPos + velocity.x) + (resXs * velocity.y)] = intensity
+		
+	for i in scale.y:
+		var arrPos = pos.x + i * resXs + pos.y * resXs
+		buffer1[arrPos] = intensity
+		buffer2[(arrPos + velocity.x) + (resXs * velocity.y)] = intensity
 
 func buffer_to_image(arr : Array[float]) -> Image:
 	var xStep: int = resX / resXs
@@ -60,6 +82,7 @@ func _ready() -> void:
 	resX = get_viewport().size.x
 	resY = get_viewport().size.y
 	
+	# Simulation resolution
 	resXs = 320
 	resYs = 200
 	
@@ -75,7 +98,11 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	# WAVE !!!	
+	# WAVE
+	var temp = buffer1
+	buffer1 = buffer2
+	buffer2 = temp
+	
 	for i in range(resXs, (resYs * resXs) - resXs):
 		buffer2[i] = ((buffer1[i - 1] +
 			buffer1[i + 1] +
@@ -85,7 +112,3 @@ func _process(_delta: float) -> void:
 		buffer2[i] -= (buffer2[i] / (2 ** 5))
 		
 	texture = ImageTexture.create_from_image(buffer_to_image(buffer2))
-	
-	var temp = buffer1
-	buffer1 = buffer2
-	buffer2 = temp
