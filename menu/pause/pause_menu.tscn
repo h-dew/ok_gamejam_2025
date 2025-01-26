@@ -16,7 +16,6 @@ script = ExtResource("1_4e1xo")
 
 [node name="pause_button_container" type="VBoxContainer" parent="."]
 visible = false
-top_level = true
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
