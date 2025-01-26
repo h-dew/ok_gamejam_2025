@@ -14,8 +14,8 @@ var damping: float = 0.9
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# Buffer size
-	xRes = get_viewport().size.x
-	yRes = get_viewport().size.y
+	xRes = get_viewport().size.x / 2
+	yRes = get_viewport().size.y / 2
 
 	buffer1.resize(xRes * yRes)
 	
@@ -39,6 +39,6 @@ func _process(delta: float) -> void:
 		buffer2[i] = ((buffer1[i-1] + 
 			buffer1[i+1] +
 			buffer1[i+x] +
-			buffer1[i-x] ) >> 2)  - buffer2[i]
+			buffer1[i-x] ) >> 1)  - buffer2[i]
 		# change shift amount to change damping
-		buffer2[i] -= buffer2[i] >> 2
+		buffer2[i] -= (buffer2[i] >> 2)
