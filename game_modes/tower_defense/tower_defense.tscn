@@ -1,38 +1,50 @@
-[gd_scene load_steps=8 format=3 uid="uid://rcddp6sc1fom"]
+[gd_scene load_steps=7 format=3 uid="uid://rcddp6sc1fom"]
 
 [ext_resource type="Script" path="res://game_modes/tower_defense/tower_defense.gd" id="1_ac523"]
 [ext_resource type="PackedScene" uid="uid://exfqs4lmmdr" path="res://menu/pause/pause_menu.tscn" id="2_iqw4n"]
-[ext_resource type="PackedScene" uid="uid://bbhmu1h2kfgn3" path="res://logic/wave_table.tscn" id="3_beg35"]
 [ext_resource type="Script" path="res://game_modes/tower_defense/texture_rect.gd" id="5_k5wd5"]
-[ext_resource type="Shader" path="res://game_modes/tower_defense/tower_defense.gdshader" id="5_rxfmi"]
 [ext_resource type="Script" path="res://game_modes/tower_defense/button.gd" id="6_joubx"]
 
+[sub_resource type="Shader" id="Shader_xgboc"]
+code = "shader_type canvas_item;
+
+void vertex() {
+	// Called for every vertex the material is visible on.
+}
+
+void fragment() {
+}
+
+//void light() {
+	// Called for every pixel for every light affecting the CanvasItem.
+	// Uncomment to replace the default light processing function with this one.
+//}
+"
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_n0edo"]
-shader = ExtResource("5_rxfmi")
+shader = SubResource("Shader_xgboc")
 
 [node name="TowerDefense" type="Node2D"]
 script = ExtResource("1_ac523")
 
-[node name="PauseMenu" parent="." instance=ExtResource("2_iqw4n")]
-top_level = true
-
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
 material = SubResource("ShaderMaterial_n0edo")
-offset_right = 1150.0
-offset_bottom = 645.0
+offset_right = 1152.0
+offset_bottom = 648.0
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
 disable_3d = true
 handle_input_locally = false
-size = Vector2i(1152, 648)
+size = Vector2i(1920, 1200)
 render_target_update_mode = 4
-
-[node name="WaveTable" parent="SubViewportContainer/SubViewport" instance=ExtResource("3_beg35")]
 
 [node name="TextureRect" type="TextureRect" parent="SubViewportContainer/SubViewport"]
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("5_k5wd5")
+
+[node name="PauseMenu" parent="." instance=ExtResource("2_iqw4n")]
+top_level = true
 
 [node name="Button" type="Button" parent="."]
 offset_left = 242.0
