@@ -4,7 +4,7 @@ var wavetex
 var pos = Vector2(0,0)
 var rate
 var damage
-
+var len
 	
 func _physics_process(delta):
 	turn()
