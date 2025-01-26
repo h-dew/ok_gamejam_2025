@@ -4,6 +4,7 @@ var build_mode = false
 var build_valid = false
 var build_location
 var build_type
+var wavetex
 
 var current_wave = 0
 var enemies_in_wave = 0
@@ -12,7 +13,11 @@ func _ready():
 	print(get_tree().get_nodes_in_group("tower_buttons"))
 	for i in get_tree().get_nodes_in_group("tower_buttons"):
 		i.pressed.connect(self.initiate_build_mode.bind(i.get_name()))
+<<<<<<< HEAD
 	start_next_wave()	
+=======
+	wavetex = $"../SubViewportContainer/SubViewport/TextureRect"
+>>>>>>> 7d7c643f101a6871213e3cc49f93e5906a7e1ec5
 	
 func _process(delta):
 	if build_mode:
