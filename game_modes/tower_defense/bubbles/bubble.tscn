@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://cvf13ndkto36m" path="res://game_modes/tower_defense/bubbles/bubble.png" id="1_1p0ki"]
 [ext_resource type="Script" path="res://game_modes/tower_defense/bubbles/bubble.gd" id="1_lqei0"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_uy52k"]
-radius = 50.04
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6kq5u"]
+size = Vector2(100, 100)
 
 [node name="Bubble" type="PathFollow2D"]
 script = ExtResource("1_lqei0")
@@ -16,4 +16,4 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_1p0ki")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-shape = SubResource("CircleShape2D_uy52k")
+shape = SubResource("RectangleShape2D_6kq5u")

@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://cobs4vo1rr8s4"]
+[gd_scene load_steps=3 format=3 uid="uid://cobs4vo1rr8s4"]
 
 [ext_resource type="Script" path="res://game_modes/tower_defense/towers/circle_t1.gd" id="1_vb0bq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kkccx"]
+radius = 200.0
 
 [node name="CircleT1" type="Node2D"]
 script = ExtResource("1_vb0bq")
@@ -12,3 +15,11 @@ polygon = PackedVector2Array(50, 0, 50, 50, 0, 50, 0, 0)
 
 [node name="Marker2D" type="Marker2D" parent="Base"]
 position = Vector2(0, -25)
+
+[node name="Range" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Range"]
+shape = SubResource("CircleShape2D_kkccx")
+
+[connection signal="body_entered" from="Range" to="." method="_on_range_body_entered"]
+[connection signal="body_exited" from="Range" to="." method="_on_range_body_exited"]
