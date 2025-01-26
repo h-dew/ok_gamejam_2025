@@ -1,8 +1,9 @@
-[gd_scene format=3 uid="uid://c3mrn34pc1po8"]
+[gd_scene format=3 uid="uid://cdiwrgsf0idqg"]
 
 [node name="Map" type="Node2D"]
 
 [node name="BG" type="ColorRect" parent="."]
+visible = false
 custom_minimum_size = Vector2(100, 100)
 offset_right = 1152.0
 offset_bottom = 648.0
