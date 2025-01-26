@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://betjx6mphe7on"]
+[gd_scene load_steps=5 format=3 uid="uid://dc1kd513cru7f"]
 
-[ext_resource type="PackedScene" uid="uid://cdiwrgsf0idqg" path="res://game_modes/tower_defense/map.tscn" id="1_g88ng"]
+[ext_resource type="PackedScene" uid="uid://c3mrn34pc1po8" path="res://game_modes/tower_defense/map.tscn" id="1_g88ng"]
 [ext_resource type="Script" path="res://game_modes/tower_defense/game_scene.gd" id="1_oyh7r"]
-[ext_resource type="PackedScene" uid="uid://dd0h4kqm3npee" path="res://game_modes/tower_defense/tower_ui.tscn" id="3_nmrl6"]
+[ext_resource type="PackedScene" uid="uid://dpmssxgu0s2oe" path="res://game_modes/tower_defense/tower_ui.tscn" id="3_nmrl6"]
 [ext_resource type="Script" path="res://game_modes/tower_defense/tower_ui.gd" id="4_vv8hm"]
 
 [node name="GameScene" type="Node2D"]
