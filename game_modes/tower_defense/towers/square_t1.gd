@@ -12,9 +12,7 @@ func _process(_delta: float) -> void:
 	var len = 20;
 	
 	if Engine.get_frames_drawn() % rate == 0:
-		print(damage)
 		wavetex.drawLine(damage, Vector2i(pos.x / 6 - len, pos.y / 6 - len), Vector2i(pos.x / 6 + len, pos.y / 6 - len), Vector2i(0,0))
 		wavetex.drawLine(damage, Vector2i(pos.x / 6 + len, pos.y / 6 - len), Vector2i(pos.x / 6 + len, pos.y / 6 + len), Vector2i(0,0))
 		wavetex.drawLine(damage, Vector2i(pos.x / 6 + len, pos.y / 6 + len), Vector2i(pos.x / 6 - len, pos.y / 6 + len), Vector2i(0,0))
 		wavetex.drawLine(damage, Vector2i(pos.x / 6 - len, pos.y / 6 + len), Vector2i(pos.x / 6 - len, pos.y / 6 - len), Vector2i(0,0))
-		

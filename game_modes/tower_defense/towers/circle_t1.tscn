@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://cobs4vo1rr8s4"]
 
-[ext_resource type="Script" path="res://game_modes/tower_defense/towers/circle_t1.gd" id="1_wu41f"]
+[ext_resource type="Script" path="res://game_modes/tower_defense/towers/circle_t1.gd" id="1_vb0bq"]
 
 [node name="CircleT1" type="Node2D"]
-script = ExtResource("1_wu41f")
+script = ExtResource("1_vb0bq")
 
 [node name="Base" type="Polygon2D" parent="."]
 color = Color(1, 0, 1, 1)
