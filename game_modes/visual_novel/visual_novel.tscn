@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://game_modes/visual_novel/visual_novel.gd" id="1_g5hoi"]
 [ext_resource type="Texture2D" uid="uid://b4m0aswl1tyg1" path="res://game_modes/visual_novel/images/test_image.png" id="2_jtn5y"]
-[ext_resource type="PackedScene" uid="uid://cd37ua20pstfu" path="res://game_modes/visual_novel/character.tscn" id="3_t6cme"]
-[ext_resource type="PackedScene" uid="uid://qp3n7lbtl8ft" path="res://game_modes/visual_novel/dialogue_ui.tscn" id="4_3sa8a"]
+[ext_resource type="PackedScene" path="res://game_modes/visual_novel/character.tscn" id="3_t6cme"]
+[ext_resource type="PackedScene" path="res://game_modes/visual_novel/dialogue_ui.tscn" id="4_3sa8a"]
 [ext_resource type="PackedScene" uid="uid://exfqs4lmmdr" path="res://menu/pause/pause_menu.tscn" id="5_pvyqg"]
 
 [node name="VisualNovel" type="Node2D"]
