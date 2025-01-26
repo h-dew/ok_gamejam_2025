@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://rcddp6sc1fom"]
+[gd_scene load_steps=7 format=3 uid="uid://rcddp6sc1fom"]
 
 [ext_resource type="Script" path="res://game_modes/tower_defense/tower_defense.gd" id="1_ac523"]
 [ext_resource type="PackedScene" uid="uid://exfqs4lmmdr" path="res://menu/pause/pause_menu.tscn" id="2_iqw4n"]
 [ext_resource type="PackedScene" uid="uid://dc1kd513cru7f" path="res://game_modes/tower_defense/game_scene.tscn" id="5_is2eq"]
 [ext_resource type="Script" path="res://game_modes/tower_defense/texture_rect.gd" id="5_k5wd5"]
-[ext_resource type="Script" path="res://game_modes/tower_defense/button.gd" id="6_joubx"]
 
 [sub_resource type="Shader" id="Shader_xgboc"]
 code = "shader_type canvas_item;
@@ -48,11 +47,3 @@ script = ExtResource("5_k5wd5")
 top_level = true
 
 [node name="GameScene" parent="." instance=ExtResource("5_is2eq")]
-
-[node name="Button" type="Button" parent="."]
-offset_left = 242.0
-offset_top = 198.0
-offset_right = 318.0
-offset_bottom = 229.0
-text = "dripdrop"
-script = ExtResource("6_joubx")
