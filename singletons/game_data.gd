@@ -11,7 +11,7 @@ var tower_data = {
 		"range": 500},
 	"circle_t1": {
 		"damage": 10,
-		"rate": 3,
+		"rate": 2,
 		"range": 300},
 	"circle_t2": {
 		"damage": 15,
