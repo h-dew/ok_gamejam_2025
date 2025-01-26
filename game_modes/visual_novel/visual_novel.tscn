@@ -1,6 +1,44 @@
-[gd_scene load_steps=2 format=3 uid="uid://deyqi7hnvbdqn"]
+[gd_scene load_steps=6 format=3 uid="uid://deyqi7hnvbdqn"]
 
 [ext_resource type="Script" path="res://game_modes/visual_novel/visual_novel.gd" id="1_g5hoi"]
+[ext_resource type="Texture2D" uid="uid://b4m0aswl1tyg1" path="res://game_modes/visual_novel/images/test_image.png" id="2_jtn5y"]
+[ext_resource type="PackedScene" uid="uid://cd37ua20pstfu" path="res://game_modes/visual_novel/character.tscn" id="3_t6cme"]
+[ext_resource type="PackedScene" uid="uid://qp3n7lbtl8ft" path="res://game_modes/visual_novel/dialogue_ui.tscn" id="4_3sa8a"]
+[ext_resource type="PackedScene" uid="uid://exfqs4lmmdr" path="res://menu/pause/pause_menu.tscn" id="5_pvyqg"]
 
 [node name="VisualNovel" type="Node2D"]
 script = ExtResource("1_g5hoi")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_jtn5y")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer2"]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Character" parent="CanvasLayer2/Control" instance=ExtResource("3_t6cme")]
+position = Vector2(30, -272)
+scale = Vector2(0.65, 0.65)
+
+[node name="DialogueUI" parent="CanvasLayer2" instance=ExtResource("4_3sa8a")]
+
+[node name="Pause_Menu" parent="." instance=ExtResource("5_pvyqg")]

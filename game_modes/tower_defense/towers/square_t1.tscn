@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfwni0axngf2j"]
+
+[ext_resource type="Script" path="res://game_modes/tower_defense/towers/square_t1.gd" id="1_le6fn"]
+
+[node name="SquareT1" type="Node2D"]
+script = ExtResource("1_le6fn")
+
+[node name="Base" type="Polygon2D" parent="."]
+offset = Vector2(-25, -25)
+polygon = PackedVector2Array(0, 0, 50, 0, 50, 50, 0, 50)
+
+[node name="ShootingPoint" type="Marker2D" parent="Base"]
+position = Vector2(0, -25)

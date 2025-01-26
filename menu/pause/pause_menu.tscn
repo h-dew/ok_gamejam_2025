@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://menu/pause/pause_quit.gd" id="1_yapq0"]
 [ext_resource type="Script" path="res://menu/pause/resume.gd" id="2_7s0gb"]
 
-[node name="PauseMenu" type="Control"]
+[node name="Pause_Menu" type="Control"]
 process_mode = 2
 layout_mode = 3
 anchors_preset = 15

@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cobs4vo1rr8s4"]
+
+[ext_resource type="Script" path="res://game_modes/tower_defense/towers/circle_t1.gd" id="1_wu41f"]
+
+[node name="CircleT1" type="Node2D"]
+script = ExtResource("1_wu41f")
+
+[node name="Base" type="Polygon2D" parent="."]
+color = Color(1, 0, 1, 1)
+offset = Vector2(-25, -25)
+polygon = PackedVector2Array(50, 0, 50, 50, 0, 50, 0, 0)
+
+[node name="Marker2D" type="Marker2D" parent="Base"]
+position = Vector2(0, -25)

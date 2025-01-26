@@ -17,15 +17,15 @@ func drawSquare(intensity: float, pos: Vector2i, scale: Vector2i, velocity: Vect
 	var velY = velocity.y
 	var arrPos: int
 	
-	#for x in scale.x:
-		#for y in scale.y:
-			#arrPos = (posX + x - scale.x) + (posY + (y - 1)) * resXs
-			#buffer2[(arrPos + velX) + (resXs * velY)] = intensity
+	for x in scale.x:
+		for y in scale.y:
+			arrPos = (posX + x - scale.x) + (posY + (y - 1)) * resXs
+			buffer2[(arrPos + velX) + (resXs * velY)] = intensity
 			
 			
-func drawTriangle(intensity: float, pos: Vector2i, scale: Vector2i, velocity: Vector 2i) -> void:
+func drawTriangle(intensity: float, pos: Vector2i, scale: Vector2i, velocity: Vector2i) -> void:
 	print("triangle")
-	return void
+	return
 
 func buffer_to_image(arr : Array[float]) -> Image:
 	var xStep: int = resX / resXs
