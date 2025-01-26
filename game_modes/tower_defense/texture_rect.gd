@@ -66,10 +66,10 @@ func buffer_to_image(arr : Array[float]) -> Image:
 		val = buffer2[i]
 		
 		if val >= 0:
-			r = val * 255
+			r = val * 127
 			g = 0
 		else:
-			g = (val * (-1)) * 255
+			g = (val * (-1)) * 127
 			r = 0
 		b = 0
 		

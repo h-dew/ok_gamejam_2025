@@ -26,7 +26,7 @@ var tower_data = {
 		"rate": 1,
 		"range": 20},
 	"diamond_t1": {
-		"damage": 1,
+		"damage": 10,
 		"rate": 10,
 		"range": 20},
 }
