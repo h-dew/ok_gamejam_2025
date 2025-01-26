@@ -1,8 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3mrn34pc1po8"]
-
-[ext_resource type="PackedScene" uid="uid://cfwni0axngf2j" path="res://game_modes/tower_defense/towers/square_t1.tscn" id="1_k0g0f"]
-[ext_resource type="PackedScene" uid="uid://dfr5l1t2rngna" path="res://game_modes/tower_defense/towers/square_t2.tscn" id="2_3jaqk"]
-[ext_resource type="PackedScene" uid="uid://cobs4vo1rr8s4" path="res://game_modes/tower_defense/towers/circle_t1.tscn" id="3_honv1"]
+[gd_scene format=3 uid="uid://c3mrn34pc1po8"]
 
 [node name="Map" type="Node2D"]
 
@@ -13,12 +9,3 @@ offset_bottom = 648.0
 color = Color(0.156863, 0.156863, 0.235294, 1)
 
 [node name="Towers" type="Node2D" parent="."]
-
-[node name="SquareT1" parent="Towers" instance=ExtResource("1_k0g0f")]
-position = Vector2(439, 114)
-
-[node name="SquareT2" parent="Towers" instance=ExtResource("2_3jaqk")]
-position = Vector2(186, 240)
-
-[node name="CircleT1" parent="Towers" instance=ExtResource("3_honv1")]
-position = Vector2(701, 267)

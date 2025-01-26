@@ -1,3 +1,28 @@
-[gd_scene format=3 uid="uid://dc1kd513cru7f"]
+[gd_scene load_steps=5 format=3 uid="uid://dc1kd513cru7f"]
+
+[ext_resource type="PackedScene" uid="uid://c3mrn34pc1po8" path="res://game_modes/tower_defense/map.tscn" id="1_g88ng"]
+[ext_resource type="Script" path="res://game_modes/tower_defense/game_scene.gd" id="1_oyh7r"]
+[ext_resource type="PackedScene" uid="uid://dpmssxgu0s2oe" path="res://game_modes/tower_defense/tower_ui.tscn" id="3_nmrl6"]
+[ext_resource type="Script" path="res://game_modes/tower_defense/tower_ui.gd" id="4_vv8hm"]
 
 [node name="GameScene" type="Node2D"]
+script = ExtResource("1_oyh7r")
+
+[node name="Map" parent="." instance=ExtResource("1_g88ng")]
+
+[node name="UI" type="CanvasLayer" parent="."]
+script = ExtResource("4_vv8hm")
+
+[node name="HUD" parent="UI" instance=ExtResource("3_nmrl6")]
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 1
+grow_vertical = 1
+mouse_filter = 2
