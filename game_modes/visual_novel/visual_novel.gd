@@ -36,6 +36,5 @@ func parse_line(line: String):
 func process_current_line():
 	var line = test_dialogue[dialogue_index]
 	var line_info = parse_line(line)
-	dialogue_ui.speaker.text = line_info["speaker"]
-	dialogue_ui.dialogue.text = line_info["dialogue"]
+	dialogue_ui.change_line(line_info["speaker"], line_info["dialogue"])
 	character.change_character(line_info["speaker"])
