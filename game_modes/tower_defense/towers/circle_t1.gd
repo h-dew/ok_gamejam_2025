@@ -1,7 +1,7 @@
 extends "res://game_modes/tower_defense/towers/turrets.gd"
 
 func _process(_delta: float) -> void:
-	var wavetex = $"../../../../GameScene".wavetex
+	var wavetex = "res://game_modes/tower_defense/texture_rect.gd"
 	var pos = get_position()
 	
 	if Engine.get_frames_drawn() % 60 == 0:
