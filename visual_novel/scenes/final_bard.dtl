@@ -1,0 +1,17 @@
+[background fade="0.0"]
+[i]We relocated to the new point given to us, and followed our orders to the T.  Ruthless on the field, we were thanked by BARD, and then given new orders. More waves to fight. Again. And again. And again. And again. I noticed a shift in the others. [/i]
+join star center
+[i]Star doesn’t laugh or cry anymore. She’s devastating on the field, and only answers any questions I ask her with a simple “Yes” or “No. There’s no passion behind her movements.[/i]
+leave star [animation="Fade Out" wait="true"]
+join square center
+[i]Square hasn’t cracked a joke or even smiled since my decision. His face stays perfectly neutral, even in the face of death. He fights, he eats, and then heads to bed every night.[/i]
+leave square [animation="Fade Out" wait="true"]
+join triangle center
+[i]Triangle lost any pride in his work. All his movements are methodical, lacking any flash or interest. He hasn’t asked me for my opinion on his technique, opting instead to look at his shoes while we wait for new orders.[/i]
+leave triangle [animation="Fade Out" wait="true"]
+join diamond center
+[i]Diamond seems to have changed the most out of us all. I haven’t heard her speak in a long time, and she hardly eats anymore. Entire missions go by where she wipes out the enemy, and then heads to bed.[/i]
+leave diamond [animation="Fade Out" wait="true"]
+[i]Myself? I used to see blood on my hands. An entire population, gone by my choice. I would stay up at night, hardly able to sleep. Nowadays? It’s completely faded, their voices gone. I don’t hear much of anything, other than the radio giving us our next orders. I don’t have to think, only do as asked. BARD should be proud. They’ve created perfect soldiers.[/i]
+[i]It’s better this way.[/i]
+[signal arg="end_act_07"]

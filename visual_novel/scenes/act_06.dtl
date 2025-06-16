@@ -1,0 +1,23 @@
+[background arg="res://assets/visual_novel/wasteland-background.png" fade="0.0"]
+join diamond left [mirrored="true"]
+diamond: We’re getting our next objective. We’ll be-
+join square leftmost [mirrored="true"]
+captain: [i]She’s shaking. Square peeks over her shoulder, and his eyes go wide. It can’t ever be that bad, can it? We’ve taken down everything thrown our way, so why?[/i]
+captain: Give me that.
+square: Captain, we can’t-
+[i]I take hold of the papers. It’s… bad. We’re ordered to move our position to defend a sector that largely finances the BARD program. This’ll leave the entire population of the nearby city exposed, leaving them to die. Do we really need to give up on everyone here?[/i]
+join triangle right
+triangle: Captain? What is it?
+[i]I hand the files to him. He glances it over and goes white as a sheet. Star’s sweating bullets by the time she’s finished with it.[/i]
+join star rightmost
+star: Captain..? This can’t be real, right…? Leaving everyone here to die..?
+square: I-It’s fine. We just have to-
+diamond: We can’t defend both. That’s spreading ourselves too thin. We’d all die.
+diamond: …Captain. It’s your call.
+triangle: You know our feelings on the matter, but does that even matter to you?
+square: Just… know that whatever you decide, we’ll follow.
+- ....We’ll stay here. Fight for something we believe in.
+	set {finalRoute} = "final_romance"
+- ....Take responsibility. We have our orders.
+	set {finalRoute} = "final_bard"
+[signal arg="end_act_06"]

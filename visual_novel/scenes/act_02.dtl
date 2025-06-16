@@ -1,0 +1,28 @@
+[background arg="res://assets/visual_novel/test_image.png" fade="0.0"]
+captain: [i]What the hell was that? Abilities, experience…. How did that make us stronger? It feels… unnatural. Wrong. BARD won’t like this.[/i]
+join star right
+star: Did you see me? I was a one-man army! Do I even need you chumps?!
+update star rightmost [mirrored="false"]
+join triangle right
+triangle: Seriously, would you cut that out?
+join square left [mirrored="true"]
+square: Right? Even then, I clearly cleaned out more Bubbles than you both did combined.
+update square leftmost
+join diamond left [mirrored="true"]
+diamond: Only because I was boosting you.
+square: Well…. er….
+star: Seriously! Captain! Who was better, me and Tri over here, or those other two losers?
+- (You and Triangle, obviously.)
+	set {starScore} += 1.0
+	set {triangleScore} += 1.0
+	star: I TOLD you! Nothing can beat these fists!
+- (Close, but not quite. Square and Diamond take the cake.)
+	set {squareScore} += 1.0
+	set {diamondScore} += 1.0
+	star: Seriously?! Were you even keeping count?
+captain: Seriously, quiet down. We need to set up again. Seems there’s more coming.
+square: Like… waves.
+triangle: ….What?
+square: Waves? Like water? Because we’re fighting bubbles-
+diamond: You should start a career in comedy, I liked that one. Only one route this time, let’s ready ourselves.
+[signal arg="end_act_02"]

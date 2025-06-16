@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5lucxihpnayw"]
+
+[ext_resource type="Script" uid="uid://cfk7ni4w1p0k3" path="res://visual_novel/scenes/act_07.gd" id="1_84g3d"]
+
+[node name="Act07" type="Node2D"]
+script = ExtResource("1_84g3d")

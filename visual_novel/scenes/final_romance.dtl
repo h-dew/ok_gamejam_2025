@@ -1,0 +1,139 @@
+[background fade="0.0"]
+[i]My heart was beating too fast in my chest. I threw away everything- and for what? A Dishonorable Discharge from BARD? A moral pat on the back? But over the coming months, fighting off waves of Bubbles for nothing more than goodwill, we finally came to grow on the folk we came to protect. [/i]
+[i]Seen as something other than human at first, we were jeered at and given no real lenience. It was difficult, but we had each other. It was only a year later, once documents of BARD’s were leaked, that people came to know the truth.[/i]
+[i]Some still despise us for our work. Some welcome us with open arms, paying for our groceries, donating supplies and money to our unit. We’re forever grateful that we can continue to listen to our moral compass and travel where they need us.[/i]
+[i]BARD became a fading thought from our minds. I’m no longer the leader, but the nickname stuck. We fight for ourselves and those around us. We felt like family. It’s only recently that I figured I could have something more….[/i]
+join cashier center
+cashier: That’ll be $37.90, Captain.
+[i]I hand the Cashier exact change. Old habits die hard.[/i]
+cashier: We have a promotion on. Free flowers for purchases over $30.
+captain: I’m good.
+set {squareScore} = 3.0
+set {starScore} = 3.0
+set {diamondScore} = 3.0
+set {triangleScore} = 3.0
+cashier: [i]The cashier fixes me with a smirk. [/i]\
+Oh, come on! You must have someone. Admit it, you can’t squirm out of this one. What’s their name?
+if {starScore} > 0.0:
+	join star right
+if {triangleScore} > 0.0:
+	join triangle rightmost
+if {squareScore} > 0.0:
+	join square left
+join diamond leftmost
+
+- Tri | [if {triangleScore} > 0.0] [else="hide"]
+	leave --All--
+	[i]I head home, to the unit’s shared house.[/i]
+	[background arg="res://assets/visual_novel/test_image.png" fade="0.0"]
+	captain: Tri. You home?
+	join triangle right
+	triangle: Of course, Captain. You need anything?
+	[i]It’s a first for me. I’ve fought giant mutants, disobeyed entire government organizations, endured months of hard training. Nothing’s given me this feeling, like my palms are sweating, like I’m breathing weirdly. We’re still learning new things. Is this…[/i]
+	[i]I quickly thrust out the flowers.[/i]
+	captain: I-It’s not anything important. \
+\
+These are... For you.
+	triangle: [i]His face lights up like nothing I’ve ever seen from him. He smiles at me.[/i]\
+Anything special today?
+	[i]I know he’s teasing me, but my face goes red.[/i]
+	captain: Tri… I, um, I….\
+[i]It’s difficult to get out, but I need to say something.[/i]\
+Ireallylikeyouandwouldyougooutwithme-
+	triangle: [i]He laughs. It sounds heavenly.[/i]\
+Slow down! I can barely understand you. [i]He looks sheepish all of the sudden.[/i]\
+But Captain… are you sure? I don’t- are you alright being with me?
+	[i]I take his hand.[/i]
+	captain: Of course I am, Tri. I couldn’t imagine any world where you’re not the right one for me.
+	[i]He wraps my hands around him, and draws me into a kiss. We stay like that for much longer than anything I could ever think is appropriate, and yet it isn’t long enough. \
+Eventually he breaks away from me, gasping for air.[/i]
+	captain: You’re a cute one when you look like this, Tri…
+	[i]He groans at my pun, pulling me into his room and kicking the door closed behind us, before his lips are on mine once more. I love them all, and I love Tri, more than anything.[/i]
+- Square | [if {squareScore} > 0.0] [else="hide"]
+	leave --All--
+	[background arg="res://assets/visual_novel/test_image.png" fade="0.0"]
+	[i]I head home, to the unit’s shared house. Square’s already in the front yard, cutting the grass. He spots me, and gives me a smile brighter than the sun. I can’t even look directly at him.[/i]
+	join square right
+	square: Captain! Wanna-
+	[i]But I zip by him into the house, gulping down water. I can’t go through with this, I feel like my stomach’s turning itself inside out, like my breath’s too short! Did I fall ill? I’ve heard of symptoms like these before, but surely it can’t be- [/i]
+	[i]Square enters the house, wringing his hands together.[/i]
+	square: Captain, if you’re mad at me for something, just lemme know, I can fix it-
+	[i]I thrust the flowers out to him, throwing on my best smile. I’m practically shaking.[/i]
+	captain: Square, these are for you.
+	[i]Square’s face goes bright red, and I think 'Oh, he’s so beautiful.'[/i]
+	square: [i]Square’s stammering.[/i]\
+Captain, I’m really grateful, but what’s the occasion?
+	[i]I can barely get it out, and yet I do.[/i]
+	captain: Square, I really, really like you. Would you go out with-
+	[i]Square’s practically buzzing, and yet he swoops me up before I can finish, with a grin that completely overshadows the first one he gave me.[/i]
+	square: Yes, yes, a thousand times yes! You have no idea how long I’ve waited, and I was gonna ask you and-
+	[i]I’m laughing at that, tears rolling down my cheeks as I hold his face in my hands.[/i]
+	captain: My God, Square, what took us so long?
+	[i]Still held up by him, I kiss him, our noses fitting right beside each other’s.[/i]
+	[i]I steer him towards his room, and he bumps the door closed with his hips, before I reach and give him another and another. I’ve finally found it. I love my friends, and I love Square, more than anything.[/i]
+- Star | [if {starScore} > 0.0] [else="hide"]
+	leave --All--
+	[background arg="res://assets/visual_novel/test_image.png" fade="0.0"]
+	[i]I head home, to the unit’s shared house. I can hear it a block away - Star’s shouts as she beats on the punching bag in the backyard. I head into the house, sit at the dining table, and just watch her for a few minutes. She’s always been so focused on improving- and that passion’s always been something I admire about her.[/i]
+	[i]She spots me, and grins up, tossing off her gloves. A few moments later, and the door’s opened.[/i]
+	join star right
+	star: Captain! What’s up? My form any good?
+	[i]I’m smiling up at her from my seat, but inside, my stomach is turning in on itself, and I can feel sweat drip down my back. I’ve never felt like this before. Am I coming down with something..? Star’s expecting a reply, and I’m still trying to figure this out. Is this…..[/i]
+	star: [i]Star’s frowning.[/i]\
+Captain? Are you alright-
+	[i]I thrust the flowers out to her, my face red.[/i]
+	captain: Star, I’ve really liked you for a long time, and would you go-
+	[i]I stop. Star’s faced away. And she’s crying.[/i]
+	star: Of course not, you idiot! You’re asking me out and I didnt get to do it first! I had this whole plan but I’m really happy and-
+	[i]She grips my face, planting her lips on mine before I can even speak.[/i]
+	captain: I’m stunned. You were going to..?
+	square: [i]She’s wiping her face on her arm.[/i]\
+Duh! And you ruined it. You really want me?
+	[i]She wraps me in a rib-crushing hug.[/i]
+	[i]I’m confused, but I can’t stop grinning.[/i]
+	captain: I’d want nothing other than you, Star.
+	[i]She’s vibrating from how giddy she is, and she shoves me into her room, before kicking the door closed and tackling me with another kiss. I’ve found it, what I live for. I love my friends, and I love Star, more than anything.[/i]
+- Diamond | [if {diamondScore} > 0.0] [else="hide"]
+	leave --All--
+	[background arg="res://assets/visual_novel/test_image.png" fade="0.0"]
+	[i]I head home to the unit’s shared house. I need to find Diamond, but it’s always a mystery where she’ll be- and yet she always knows where I am. It’s her brilliant mind- something I both admire and envy. I’ll likely have to set aside 15 minutes to find-[/i]
+	[i]I gently open the door, and jump. She’s standing right behind the door.[/i]
+	join diamond right
+	diamond: Oh! Captain. I was going to head out soon. Want me to pick up anything?
+	[i]I shake my head no. I’m hiding the flowers behind my back, but she doesn't notice. Or at least pretends not to. My hands are shaking, and my stomach feels like it’s doing flips. Just my luck to come down with something right now. Unless… feeling like this is a sign of…..[/i]
+	diamond: Captain? Something wrong?\
+[i]She’s frowning, a worried crease to her forehead.[/i]
+	captain: N-no. Nothing’s wrong. Um. Diamond. I need to ask you something.
+	[i]She smiles at me, a small smirk.[/i]
+	diamond: I know exactly what you’re going to ask. And the answer’s no.
+	[i]My heart drops to my stomach. No? Just like that? I understand that it’s her choice, but to instantly reject me- my dreams-[/i]
+	diamond: You already know I hate the stupid colored carrots. Orange is perfectly fine, and it doesn't look like shit in the kitchen.
+	[i]I let out a loud sigh.[/i]
+	captain: It’s not that, Diamond.
+	[i]I pull the flowers from behind my back.[/i]
+	captain: I really like you. W-would you… go out with me?
+	[i]This is the first time I’ve seen her stunned since my big decision, years ago. It’s a face I’ll never forget.[/i]
+	diamond: Seriously? You’re not joking?
+	[i]Is that a bad sign?[/i]
+	captain: No, I’m being serious here. If you don’t like me back, it’s-
+	[i]She cuts me off with a rough kiss and a wicked smile.[/i]
+	diamond: Captain, I’ve wanted to do that for years. Never thought you had it in you, so I was beginning to give up here.
+	[i]I never expected this. She’s kept up a pretty docile mask, but to really let it down- I really like it.[/i]
+	captain: Diamond, I like you for you. You really-
+	[i]She doesn’t give me a chance to speak, literally throwing me into her room, slamming it shut with her hip.[/i]
+	diamond: It’s exactly what I want to hear. You have no clue, Captain.
+	[i]She grips my shirt, before smashing her lips to mine. This is exactly what I live for. I love my friends, and I love Diamond, more than anything.[/i]
+- You
+	leave --All--
+	join cashier right
+	[i]Seriously, right now? I never thought I’d feel this way, but here, in this grocery store, I can’t ignore it. I’m sweating bullets, my breathing uneven. Is this…?[/i]
+	cashier: ....Captain?
+	[i]Even my name on the cashier’s lips sound like the angels of heaven came down to sing in harmony. I know it’s sudden, but I know this to be true. I thrust out the flowers.[/i]
+	cashier: F-for me? No, you must have someone you really love, someone you-
+	captain: [i]I cut them off.[/i]\
+Ever since I laid eyes on you, I knew it. I knew I must have you. Every week, I see you here, and you brighten up my life. Will you go out with me?
+	[i]There’s tears in their eyes. I can hardly stand it. Can angels cry? I know they can, for I see one doing so in front of me.[/i]
+	cashier: Captain, you-you’re the greatest thing to ever happen to me.
+	[i]The cashier grips my shirt, pulling me over the till to give me a deep kiss. I finally know what heaven tastes like. A new meaning to the word “divine”. Customers drop their items to the floor and clap. Some cry. All I know is that I can never let go.[/i]
+	[i]I know this for sure - I love my friends, and I love the cashier at the local supermarket, more than anything in the world, and whatever afterlife comes next.[/i]
+[signal arg="end_act_07"]

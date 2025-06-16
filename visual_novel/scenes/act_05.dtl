@@ -1,0 +1,97 @@
+[background arg="res://assets/visual_novel/wasteland-background.png" fade="0.0"]
+join square left [mirrored="true"]
+square: Whew. That’s the last of them.
+[i]RING RING![/i]
+join diamond leftmost [mirrored="true"]
+diamond: BARD headquarters calling. They want two of us to do recon and data upload to the east of our position. They aren’t happy about new developments.
+join star right
+star: Ooh! Pick me! I wanna go!
+join triangle rightmost
+captain: [i]I’m an obvious candidate. Who should I choose to come with?[/i]
+- Triangle
+	leave --All--
+	join triangle right [animation="Instant In" length="0.0"]
+	triangle: Of course. I’m an obvious choice. Shall we commence, Captain?
+	leave triangle
+	[background arg="res://assets/visual_novel/test_image.png" fade="0.5"]
+	join triangle right
+	captain: We’re about 500 m away.
+	triangle: … Captain. It’s about BARD.
+	captain: Again? Triangle, it’s not-
+	triangle: I know. They sent us here, but really, aren’t we turning into our enemies?
+	triangle: The bubbles - they mutated into something more than human. It’s obvious they hate us - what if it’s because we’re the evil ones here?
+	captain: Triangle, calm down.
+	triangle: If you really cared, you’d call me Tri like everyone else does. We’ve been in the same unit for 6 years. You owe me at least that much.
+	- Tri, then.
+		set {triangleScore} += 2.0
+	- Triangle, we need to keep this professional.
+		set {triangleScore} -= 2.0
+	captain: We have our orders. We can’t stop now, it’s our responsibility to keep onward.
+	triangle: I’m not saying we should stop. The bubbles are a threat.
+	triangle: I don't know if it’s the upgrades talking anymore. I thought I’d be the perfect soldier for BARD, and yet….
+	triangle: I feel like I’m drifting away from their ideals.
+	triangle: Can I still fight by your side, Captain?
+- Star
+	leave --All--
+	[background arg="res://assets/visual_novel/test_image.png" fade="0.5"]
+	join star right
+	star: Are we there yet? I feel like we’ve been walking forever…
+	captain: You’re the one who volunteered. BARD needs this of us.
+	star: BARD this, BARD that. Do you ever think for yourself, Captain?
+	captain: ......
+	star: …Sorry. That was too far.
+	captain: You shouldn’t be doubting our objective, Star.
+	star: I’m not! It’s just….
+	star: Don’t you ever feel like - we’re going too far with this?
+	star: I finally feel alive, instead of some unthinking, unfeeling machine.
+	star: And I… I love it. I want to be like this for the rest of my life. Like I have a sense of self.
+	star: Is that so wrong?
+	- It’s not wrong. Just…. Stay in line.
+		set {starScore} += 2.0
+	- You shouldn’t listen to your heart. Use your head.
+		set {starScore} -= 2.0
+	star: …I know. I need to be smarter about this.
+	star: Just. Promise me. That you’ll watch my back, alright?
+- Square
+	leave --All--
+	[background arg="res://assets/visual_novel/test_image.png" fade="0.5"]
+	join square right
+	square: Another 15 minutes, and we should arrive.
+	captain: You’re quite diligent, Square.
+	square: Thank you, Captain. I aim to impress.
+	captain: Shouldn’t this be the norm?
+	square: [i]Sighs[/i] Captain. Haven’t you noticed you’re being a little hard on us? We’ve all been in the same unit for 6 years.
+	captain: It’s a regular level of expectation. BARD soldiers should be-
+	square: You only seem to care about our employers. We’ve known you for too long for this to only be professional.
+	square: What exactly is making you stay at BARD?
+	- It’s you all. I want my unit to be safe.
+		set {squareScore} += 2.0
+	- It’s my country, my society. I need to save them.
+		set {squareScore} -= 2.0
+	square: … I see. Thank you for being honest.
+	square: We’re at the point, data collected. We should head back.
+	square: And… I hope we can continue to fight together.
+- Diamond
+	leave --All--
+	[background arg="res://assets/visual_novel/test_image.png" fade="0.5"]
+	join diamond right
+	diamond: Captain, we’re at the point. Data collection starting now.
+	diamond: Seems we have a minute to talk.
+	captain: Any conversation topics?
+	diamond: Captain… do you… think we’re doing the right thing here?
+	diamond: I know that the bubbles are a threat. I understand that they’re the enemy, that we need to keep everyone safe.
+	diamond: But BARD? I’m beginning to have my doubts.
+	captain: Diamond, if you’re thinking of deserting…
+	diamond: I’m not. I could never leave this all behind. Leave you all behind.
+	diamond: It’s just…are we really all that different from the Bubbles? In society’s eyes, at least.
+	diamond: Are we going to get home, only to be shunned for these upgrades? For being different, even if we did save them?
+	- Even if they do, we’ll all have each other. I won’t let you come to harm.
+		set {diamondScore} += 2.0
+	- It’s our responsibility. We need to push onward, for the good of society.
+		set {diamondScore} -= 2.0
+	diamond: … At least you’re truthful.
+	diamond: Data’s finished, time to head back.
+	diamond: Even harboring these doubts, I won’t stop.
+	diamond: But promise me this, Captain.
+	diamond: If anything happens, we’ll fight for our bonds.
+[signal arg="end_act_05"]

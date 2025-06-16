@@ -1,0 +1,23 @@
+[background arg="res://assets/visual_novel/wasteland-background.png" fade="0.0"]
+captain: [i]In this expanse of space, there is only BARD - the Bubble Assault Response Division- a bastion to save our society from these savage mutants, humans who gave up and evolved. Tasked with defending this point, our unit will use everything we have to stop them. Hold the line.[/i]
+join diamond right [animation="Fade In"]
+diamond: Captain, are you sure you can handle this? BARD hasn’t sent anyone to this point in years, and our orders -
+captain: We have our orders. BARD knows what’s best, and these Bubbles will turn us all unless we take some risks. You’d do well to quit doubting our stance on this.
+join square left [animation="Fade In" mirrored="true"]
+square: Are we splitting up?
+update diamond rightmost [move_time="0.4"]
+join star right [animation="Fade In Down"]
+star: Of course we’re splitting up, dumbass. How would we defend two points if we had all our eggs in one basket?
+square: …my bad. Well then. Captain, who’s accompanying you?
+leave --All-- [animation="Instant Out" length="0.0"]
+join triangle left [animation="Fade In" length="0.2" mirrored="true"]
+join diamond right [animation="Fade In" length="0.2"]
+- Triangle
+	leave diamond
+	triangle: Thank god you made a decision. I was getting antsy.
+	set {triangleScore} += 1.0
+- Diamond
+	leave triangle
+	diamond: Fine, let’s get this over with.
+	set {diamondScore} += 1.0
+[signal arg="end_act_01"]

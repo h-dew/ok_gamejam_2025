@@ -1,0 +1,20 @@
+[background arg="res://assets/visual_novel/wasteland-background.png" fade="0.0"]
+captain: [i]Do they even care?! They’re obviously changing through these “Upgrades” and they haven’t said a word![/i]
+captain: [i]As their captain, I have to at least bring it to their attention.[/i]
+captain: Hold it.
+join diamond left [mirrored="true"]
+diamond: How goes it, Captain?
+captain: Do you all notice anything… different about yourselves?
+join triangle right
+triangle: Do you mean the “upgrades” we’ve been using? Yeah, we noticed.
+join star rightmost
+star: I like it! Helps out a lot on the field. Stronger, faster, cooler-
+join square leftmost [mirrored="true"]
+square: It’s like I’m floating, like everything feels right. It feels good.
+everyone: …..
+captain: *Cough* right. But don’t you feel wrong for using them? 
+star: Eh? Why would we? They’re helping us to do our jobs!
+diamond: Right? We’re better with them.
+captain: But aren't we doing the same as them? Evolving ourselves? We need to stop this. BARD runs us for a reason; they wouldn’t-
+square: More coming. Talk later.
+[signal arg="end_act_03"]

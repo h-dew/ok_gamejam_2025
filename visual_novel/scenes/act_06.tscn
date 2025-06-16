@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://co2slkfogof5b"]
+
+[ext_resource type="Script" uid="uid://dykndjw84pe3y" path="res://visual_novel/scenes/act_06.gd" id="1_eu1cr"]
+
+[node name="Act06" type="Node2D"]
+script = ExtResource("1_eu1cr")

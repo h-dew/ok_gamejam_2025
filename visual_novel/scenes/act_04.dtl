@@ -1,0 +1,27 @@
+[background arg="res://assets/visual_novel/test_image.png" fade="0.0"]
+join square left [mirrored="true"]
+square: Seriously, if it bothers you so much, just ask for a reassignment!
+join triangle right
+triangle: I won’t, but if BARD hears about this-
+captain: What’s going on?
+square: Triangle’s freaking out about how we’re changing. 
+triangle: We all feel different, like a veil being lifted over our eyes. We all just- feel more.
+join diamond leftmost [mirrored="true"]
+diamond: He’s right. It’s no longer physical. We can feel an emotional shift as well.
+diamond: We’re meant to be soldiers, holding the line against these mutants…
+join star rightmost
+star: But if we’re changing ourselves…
+square: Captain. Do you feel it too?
+- YES
+	set {triangleScore} += 1.0
+	set {squareScore} += 1.0
+	set {starScore} += 1.0
+	set {diamondScore} += 1.0
+- NO
+	set {triangleScore} -= 1.0
+	set {squareScore} -= 1.0
+	set {starScore} -= 1.0
+	set {diamondScore} -= 1.0
+captain: Will this affect your work?
+square: ….No, Captain.
+[signal arg="end_act_04"]

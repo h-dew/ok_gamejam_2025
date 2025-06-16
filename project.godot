@@ -29,18 +29,33 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"captain": "res://visual_novel/characters/captain.dch",
+"cashier": "res://visual_novel/characters/cashier.dch",
 "diamond": "res://visual_novel/characters/diamond.dch",
-"mc": "res://visual_novel/characters/mc.dch",
+"everyone": "res://assets/visual_novel/everyone.dch",
 "square": "res://visual_novel/characters/square.dch",
 "star": "res://visual_novel/characters/star.dch",
 "triangle": "res://visual_novel/characters/triangle.dch"
 }
 directories/dtl_directory={
-"scene01": "res://visual_novel/scenes/scene01.dtl"
+"act_01": "res://visual_novel/scenes/act_01.dtl",
+"act_02": "res://visual_novel/scenes/act_02.dtl",
+"act_03": "res://visual_novel/scenes/act_03.dtl",
+"act_04": "res://visual_novel/scenes/act_04.dtl",
+"act_05": "res://visual_novel/scenes/act_05.dtl",
+"act_06": "res://visual_novel/scenes/act_06.dtl",
+"final_bard": "res://visual_novel/scenes/final_bard.dtl",
+"final_romance": "res://visual_novel/scenes/final_romance.dtl"
 }
 layout/style_list=["res://assets/visual_novel/dialogic_style.tres"]
 layout/default_style="res://assets/visual_novel/dialogic_style.tres"
-variables={}
+variables={
+"diamondScore": 0,
+"finalRoute": "",
+"squareScore": 0,
+"starScore": 0,
+"triangleScore": 0
+}
 glossary/default_case_sensitive=true
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01

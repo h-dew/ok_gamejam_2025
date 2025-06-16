@@ -9,8 +9,8 @@
 "style": ""
 },
 &"default_portrait": "",
-&"description": "",
-&"display_name": "You",
+&"description": "The player character.",
+&"display_name": "Captain",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
