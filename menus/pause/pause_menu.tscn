@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://exfqs4lmmdr"]
+
+[ext_resource type="Script" uid="uid://c3svk7g1m3ht3" path="res://menus/pause/pause_menu.gd" id="1_4e1xo"]
+[ext_resource type="Script" uid="uid://d3h5wfohf6wy" path="res://menus/pause/pause_quit.gd" id="1_yapq0"]
+[ext_resource type="Script" uid="uid://c6qytnwedghln" path="res://menus/pause/resume.gd" id="2_7s0gb"]
+
+[node name="Pause_Menu" type="Control"]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4e1xo")
+
+[node name="pause_button_container" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="resume" type="Button" parent="pause_button_container"]
+visibility_layer = 2
+layout_mode = 2
+text = "resume"
+script = ExtResource("2_7s0gb")
+
+[node name="quit" type="Button" parent="pause_button_container"]
+layout_mode = 2
+text = "quit"
+script = ExtResource("1_yapq0")

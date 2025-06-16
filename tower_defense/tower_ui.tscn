@@ -1,0 +1,76 @@
+[gd_scene load_steps=5 format=3 uid="uid://dpmssxgu0s2oe"]
+
+[ext_resource type="Script" uid="uid://cwt7lpbwj57jq" path="res://tower_defense/buttons.gd" id="1_qth4v"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tleco"]
+bg_color = Color(0, 0, 0, 0.313726)
+border_width_top = 1
+border_color = Color(1, 1, 1, 0.588235)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+
+[sub_resource type="Theme" id="Theme_mqf06"]
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_tleco")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hvj5y"]
+bg_color = Color(0, 0, 0, 0)
+
+[node name="TowerUI" type="Control"]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -960.0
+offset_top = -1200.0
+offset_right = 960.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_mqf06")
+
+[node name="ShopPanel" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="TowerButtons" type="HBoxContainer" parent="ShopPanel"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="square" type="Button" parent="ShopPanel/TowerButtons" groups=["tower_buttons"]]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Square"
+flat = true
+script = ExtResource("1_qth4v")
+
+[node name="circle" type="Button" parent="ShopPanel/TowerButtons" groups=["tower_buttons"]]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Circle"
+flat = true
+
+[node name="ScorePanel" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(150, 10)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hvj5y")
+
+[node name="ScoreNum" type="Label" parent="ScorePanel"]
+layout_mode = 2
+text = "987654321"
+horizontal_alignment = 1
+vertical_alignment = 1

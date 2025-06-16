@@ -1,0 +1,9 @@
+join star right
+star: Test test
+Hmm
+mc: Hello
+join triangle left [animation="Slide In Left" mirrored="true"]
+triangle: Hi
+leave star [animation="Fade Out Down"]
+join square right [animation="Fade In Down"]
+square: test
