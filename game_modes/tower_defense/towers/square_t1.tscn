@@ -1,9 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cfwni0axngf2j"]
+[gd_scene load_steps=2 format=3 uid="uid://cfwni0axngf2j"]
 
 [ext_resource type="Script" path="res://game_modes/tower_defense/towers/square_t1.gd" id="1_le6fn"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_krsnv"]
-radius = 200.0
 
 [node name="SquareT1" type="Node2D"]
 script = ExtResource("1_le6fn")
@@ -14,11 +11,3 @@ polygon = PackedVector2Array(0, 0, 50, 0, 50, 50, 0, 50)
 
 [node name="ShootingPoint" type="Marker2D" parent="Base"]
 position = Vector2(0, -25)
-
-[node name="Range" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Range"]
-shape = SubResource("CircleShape2D_krsnv")
-
-[connection signal="body_entered" from="Range" to="." method="_on_range_body_entered"]
-[connection signal="body_exited" from="Range" to="." method="_on_range_body_exited"]

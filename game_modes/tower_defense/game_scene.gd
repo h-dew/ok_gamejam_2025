@@ -10,6 +10,7 @@ var current_wave = 0
 var enemies_in_wave = 0
 
 func _ready():
+	print(get_tree().get_nodes_in_group("tower_buttons"))
 	for i in get_tree().get_nodes_in_group("tower_buttons"):
 		i.pressed.connect(self.initiate_build_mode.bind(i.get_name()))
 	start_next_wave()	
@@ -43,6 +44,7 @@ func retrieve_wave_data():
 	
 func spawn_bubbles(wave_data):
 	for i in wave_data:
+		print(i)
 		var new_enemy = preload("res://game_modes/tower_defense/bubbles/bubble.tscn").instantiate()
 		get_node("Map").get_node("Path").add_child(new_enemy, true)
 		
@@ -77,8 +79,6 @@ func verify_and_build():
 		# Verify enough cash
 		var new_tower = load("res://game_modes/tower_defense/towers/" + build_type + ".tscn").instantiate()
 		new_tower.position = build_location
-		new_tower.built = true
-		new_tower.type = build_type
 		get_node("Map/Towers").add_child(new_tower, true)
 		# Deduct cash
 		# Update cash label

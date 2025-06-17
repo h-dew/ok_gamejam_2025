@@ -47,10 +47,3 @@ script = ExtResource("5_k5wd5")
 top_level = true
 
 [node name="GameScene" parent="." instance=ExtResource("5_is2eq")]
-
-[node name="Button" type="Button" parent="."]
-offset_left = 242.0
-offset_top = 198.0
-offset_right = 318.0
-offset_bottom = 229.0
-text = "dripdrop"
