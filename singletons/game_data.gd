@@ -2,7 +2,6 @@ extends Node
 
 var tower_data = {
 	"square_t1": {
-<<<<<<< HEAD
 		"damage": 50,
 		"rate": 1,
 		"range": 400},
@@ -17,23 +16,7 @@ var tower_data = {
 	"circle_t2": {
 		"damage": 15,
 		"rate": 1.2,
-		"range": 300}
-=======
-		"damage": 1,
-		"rate": 10,
-		"range": 20},
-	"square_t2": {
-		"damage": 40,
-		"rate": 1.5,
-		"range": 20},
-	"circle_t1": {
-		"damage": 1,
-		"rate": 2,
-		"range": 20},
-	"circle_t2": {
-		"damage": 15,
-		"rate": 4,
-		"range": 20},
+		"range": 300},
 	"triangle_t1": {
 		"damage": 5,
 		"rate": 1,
@@ -46,5 +29,4 @@ var tower_data = {
 		"damage": 10,
 		"rate": 10,
 		"range": 20},
->>>>>>> 1d2a286c117ac1b2f206eb15bdb2927d8aaf9ac4
 }
